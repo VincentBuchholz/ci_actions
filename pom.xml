@@ -105,7 +105,7 @@
                 <version>2.2</version>
                 <configuration>
                     <server>TomcatServer</server>
-                    <url>http://165.227.157.133:8081/manager/html</url>
+                    <url>http://165.227.157.133:8081</url>
                     <username>${remote.user}</username>
                     <password>${remote.password}</password>
                     <update>true</update>
