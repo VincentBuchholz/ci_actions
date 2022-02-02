@@ -18,7 +18,7 @@
         <remote.server>http://161.35.216.142:8081/manager/text</remote.server>
         
     </properties>
-    
+
     <dependencies>
         
         <dependency>
@@ -95,21 +95,22 @@
     </dependencies>
 
     <build>
-       
+
         <plugins>
+
             <!-- Plugin used to deploy to remote server -->
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
-                <configuration>          
+                <configuration>
                     <server>TomcatServer</server>
-                    <url>${remote.server}</url>
+                    <url>165.227.157.133</url>
                     <username>${remote.user}</username>
                     <password>${remote.password}</password>
-                    <update>true</update>    
-                </configuration>  
-            </plugin>          
+                    <update>true</update>
+                </configuration>
+            </plugin>
             
             <!--This is used to enable @BeforeAll etc used in jUnit 5 -->
             <plugin>
@@ -178,6 +179,11 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
             </plugin>
         </plugins>
     </build>
